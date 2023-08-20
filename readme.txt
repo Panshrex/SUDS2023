@@ -2,7 +2,7 @@ Hello!
 
 This is the project directory for my (Peter Shi) SUDS 2023 project supervised by Prof. Jo Bovy on adapting the astroNN package to SDSS-V data
 
-This project is broadly divided into 4 stages:
+This project is broadly divided into 5 stages:
     1. Exploration of the astroNN package and working with spectral data and .fits files 
         Exploration and Initial Analysis
     2. Comparison of SDSS-IV and SDSS-V spectra using a crossmatch file of what should be the same set of stars 
