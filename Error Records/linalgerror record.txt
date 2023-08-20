@@ -1,0 +1,34 @@
+ValueError: On entry to DLASCL parameter number 4 had an illegal value
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/tmp/ipykernel_3990/1784258851.py", line 22, in <module>
+    aspec = getSpectrumSDSSIV(afile)
+            ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/ipykernel_3990/4089999667.py", line 13, in getSpectrumSDSSIV
+    _normspec, _spec_err = apogee_continuum(_spec, _spec_err,
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/petershi/miniconda3/envs/SDSSV/lib/python3.11/site-packages/astroNN/apogee/chips.py", line 312, in apogee_continuum
+    blue_spectra, blue_spectra_err = continuum(
+                                     ^^^^^^^^^^
+  File "/home/petershi/miniconda3/envs/SDSSV/lib/python3.11/site-packages/astroNN/apogee/chips.py", line 246, in continuum
+    fit = np.polynomial.chebyshev.Chebyshev.fit(
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/petershi/miniconda3/envs/SDSSV/lib/python3.11/site-packages/numpy/polynomial/_polybase.py", line 980, in fit
+    res = cls._fit(xnew, y, deg, w=w, rcond=rcond, full=full)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/petershi/miniconda3/envs/SDSSV/lib/python3.11/site-packages/numpy/polynomial/chebyshev.py", line 1671, in chebfit
+    return pu._fit(chebvander, x, y, deg, rcond, full, w)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/petershi/miniconda3/envs/SDSSV/lib/python3.11/site-packages/numpy/polynomial/polyutils.py", line 660, in _fit
+    c, resids, rank, s = np.linalg.lstsq(lhs.T/scl, rhs.T, rcond)
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<__array_function__ internals>", line 180, in lstsq
+  File "/home/petershi/miniconda3/envs/SDSSV/lib/python3.11/site-packages/numpy/linalg/linalg.py", line 2300, in lstsq
+    x, resids, rank, s = gufunc(a, b, rcond, signature=signature, extobj=extobj)
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/petershi/miniconda3/envs/SDSSV/lib/python3.11/site-packages/numpy/linalg/linalg.py", line 101, in _raise_linalgerror_lstsq
+    raise LinAlgError("SVD did not converge in Linear Least Squares")
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+SystemError: <class 'numpy.linalg.LinAlgError'> returned a result with an exception set

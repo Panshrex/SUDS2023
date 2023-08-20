@@ -1,0 +1,27 @@
+Traceback (most recent call last):
+  File "/home/petershi/miniconda3/envs/SDSSV/lib/python3.11/site-packages/astropy/io/fits/column.py", line 2142, in _get_index
+    indx = names.index(key.rstrip())
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: 'LAMBDA' is not in list
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/tmp/ipykernel_8437/3382295355.py", line 17, in <module>
+    cspec = getSpectrumSDSSV(cfile)
+            ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/ipykernel_8437/2863724783.py", line 3, in getSpectrumSDSSV
+    wave = data['LAMBDA']
+           ~~~~^^^^^^^^^^
+  File "/home/petershi/miniconda3/envs/SDSSV/lib/python3.11/site-packages/astropy/io/fits/fitsrec.py", line 513, in __getitem__
+    return self.field(key)
+           ^^^^^^^^^^^^^^^
+  File "/home/petershi/miniconda3/envs/SDSSV/lib/python3.11/site-packages/astropy/io/fits/fitsrec.py", line 695, in field
+    column = self.columns[key]
+             ~~~~~~~~~~~~^^^^^
+  File "/home/petershi/miniconda3/envs/SDSSV/lib/python3.11/site-packages/astropy/io/fits/column.py", line 1751, in __getitem__
+    key = _get_index(self.names, key)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/petershi/miniconda3/envs/SDSSV/lib/python3.11/site-packages/astropy/io/fits/column.py", line 2151, in _get_index
+    raise KeyError(f"Key '{key}' does not exist.")
+KeyError: "Key 'LAMBDA' does not exist."
