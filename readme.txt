@@ -18,4 +18,6 @@ Error Records just contain a few .txt files of some errors I ran into. Shouldn't
 
 It should be noted that these divisions are not perfect and that there may be some overlap, especially in earlier files/notebooks which are more poorly organized 
 
-Each folder will also have its own readme file which go into more depth explaining each notebook 
+Each folder will also have its own readme file which go into more depth explaining each notebook
+
+Project poster and summary document are present
